@@ -1,0 +1,68 @@
+#logindiv{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#edituserdiv{
+    width: 100%;
+}
+#logindiv>h1{
+    border-bottom: 4px solid blue;
+    border-top: 4px solid blue;
+    border-left: 0.5px solid rgb(41, 41, 77);
+    border-right: 0.5px solid rgb(41, 41, 77);
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+#inputdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+#inputdiv input{
+    height: 35px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+    border: 0.3px solid blue;
+}
+#inputdiv input:focus{
+    outline: 2px solid blue;
+}
+#inputdiv label{
+    font-weight: 700;
+    margin-top: 10px;
+}
+#inputdiv button{
+    height: 40px;
+    border: 1px solid blue;
+    background-color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+#inputdiv button:hover{
+    border: 1px solid rgb(9, 9, 169);
+    background-color: rgb(9, 9, 169);
+}
+#logindiv span{
+    color: blue;
+    text-decoration: underline;
+}
+#logindiv p{
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -1,0 +1,11 @@
+#blogbody{
+    padding: 10px;
+    outline: none;
+    border: 0.5px solid blue;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#blogbody:focus{
+    outline: 2px solid blue;
+}

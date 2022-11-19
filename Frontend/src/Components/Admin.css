@@ -1,0 +1,49 @@
+.crudonadmin{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+.crudonadmin>button,#Deleteblogdiv>button,.userdatadiv button{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+.crudonadmin>button:last-child{
+    background-color: red;
+}
+#Deleteblogdiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#allusers{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.userdatadiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.userdatadiv>div{
+    display: flex;
+    gap: 20px;
+}
+.userdatadiv>div>button:last-child{
+    background-color: red;
+}
+#logout{
+    cursor: pointer;
+}

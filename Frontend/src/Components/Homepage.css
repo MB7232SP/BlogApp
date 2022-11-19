@@ -1,0 +1,30 @@
+.homemapidv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#mainhomemapidv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.blogview{
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.authorname{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.usericon{
+    padding: 10px;
+    border: 0.1px solid rgb(74, 71, 71);
+    border-radius: 50%;
+}
