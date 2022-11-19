@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link , useNavigate} from 'react-router-dom'
+import { Loding } from './Loding'
 import './login_signup.css'
 import { Navbaar } from './Navbaar'
 
@@ -8,6 +9,7 @@ const userdata = {
     password:""
 }
 export const Login = ()=>{
+    const[load,setload] = React.useState(false)
     const[user,setuser] = React.useState(userdata);
     const navigate = useNavigate();
     const Handlechhange = (e)=>{
@@ -18,6 +20,7 @@ export const Login = ()=>{
          }))
     }
     const VerifyDetails = ()=>{
+        setload(true)
         fetch('https://my-blog-app-heroku.herokuapp.com/Login',{
             method:"POST",
             body:JSON.stringify(user),
@@ -39,6 +42,9 @@ export const Login = ()=>{
         .catch((err)=>{
             alert('somthing went wrong')
         })
+        .finally(()=>{
+            setload(false)
+        })
 
 
     }
@@ -52,7 +58,7 @@ export const Login = ()=>{
     return(
         <div>
             <Navbaar/> 
-         <div id="logindiv">
+         {load ? <Loding/> : <div id="logindiv">
              <h1>LOGIN</h1>
              <div id="inputdiv">
                 <label htmlFor="email">Email Id</label>
@@ -64,7 +70,7 @@ export const Login = ()=>{
              <div style={{width:"100%"}}>
                 <p>Don't have an account contact admin or Admin <Link to={'/signup'}><span>Sign up</span></Link></p>
              </div>
-          </div>
+          </div>}
         </div>
     )
 }
