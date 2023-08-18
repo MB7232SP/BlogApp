@@ -39,7 +39,7 @@ export const AdminBlogList = ({ el,FetchBlogs,setload ,approve,edit }) => {
     const Handledelete = ()=>{
         setOpen(false)
         setload(true)
-           fetch(`https://my-blog-app-heroku.herokuapp.com/blog/${el._id}`,{
+           fetch(`http://localhost:8080/blog/${el._id}`,{
             method:"DELETE"
            })
            .then(()=>{
@@ -62,7 +62,7 @@ export const AdminBlogList = ({ el,FetchBlogs,setload ,approve,edit }) => {
  }
   const SaveBlogChange = (obj)=>{
         setload(true)
-        fetch(`https://my-blog-app-heroku.herokuapp.com/blogs/${el._id}`,{
+        fetch(`http://localhost:8080/blogs/${el._id}`,{
           method:"PATCH",
           body:JSON.stringify(obj),
           headers:{"content-type":"application/json"}

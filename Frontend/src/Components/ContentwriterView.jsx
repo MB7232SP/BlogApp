@@ -14,7 +14,7 @@ export const ContentWriterView = ()=>{
     const {id} = useParams();
      React.useEffect(()=>{
           setload(true)
-        fetch(`https://my-blog-app-heroku.herokuapp.com/blog/${id}`)
+        fetch(`http://localhost:8080/blog/${id}`)
         .then((res)=>res.json())
         .then((res)=>{
             if(res.status==="success"){

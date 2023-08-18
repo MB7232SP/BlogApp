@@ -70,7 +70,7 @@ UserControl.post('/SignUp',async(req,res)=>{
         let token = signin(user.toJSON());
         res.send({
             status:"success",
-            response:token,
+            token:token,
             usertype:user.usertype
         })
     } catch (error) {

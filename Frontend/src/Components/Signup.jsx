@@ -23,7 +23,7 @@ export const Signup = ()=>{
     }
     const VerifyDetails = ()=>{
         setload(true)
-        fetch('https://my-blog-app-heroku.herokuapp.com/SignUp',{
+        fetch('http://localhost:8080/SignUp',{
             method:"POST",
             body:JSON.stringify(user),
             headers:{"content-type":"application/json"}
@@ -31,7 +31,7 @@ export const Signup = ()=>{
         .then((res)=>res.json())
         .then((res)=>{
             if(res.status==="success"){
-                localStorage.setItem("Tocken",res.tocken);
+                localStorage.setItem("Tocken",res.token);
                 navigate('/adduser')
             }else{
                 alert(res.response);

@@ -18,7 +18,7 @@ export const Allcontentwriter = ()=>{
     },[]);
     const FectAllUsers = ()=>{
         setload(true)
-          fetch('https://my-blog-app-heroku.herokuapp.com/allusers')
+          fetch('http://localhost:8080/allusers')
           .then((res)=>res.json())
           .then((res)=>{
             if(res.status==="success"){

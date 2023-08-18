@@ -27,7 +27,7 @@ React.useEffect(()=>{
 },[])
 const FetchBlogs = ()=>{
     setload(true)
-    fetch('https://my-blog-app-heroku.herokuapp.com/TokenLogin',{
+    fetch('http://localhost:8080/TokenLogin',{
             method:"POST",
             body:JSON.stringify({jwtToken:tocken}),
             headers:{"content-type":"application/json"}
@@ -39,7 +39,7 @@ const FetchBlogs = ()=>{
             }
           })
           .then(()=>{
-            fetch(`https://my-blog-app-heroku.herokuapp.com/blogs/${Userid}`)
+            fetch(`http://localhost:8080/blogs/${Userid}`)
             .then((res)=>res.json())
             .then((res)=>{
               if(res.status==="success"){

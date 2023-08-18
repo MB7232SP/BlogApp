@@ -25,7 +25,7 @@ React.useEffect(()=>{
 },[])
 const FetchBlogs = ()=>{
     setload(true)
-    fetch('https://my-blog-app-heroku.herokuapp.com/Allblogs')
+    fetch('http://localhost:8080/Allblogs')
     .then((res)=>res.json())
     .then((res)=>{
       if(res.status==="success"){
@@ -44,7 +44,7 @@ const FetchBlogs = ()=>{
 }
 const HandleApprove = (id)=>{
   setload(true)
-  fetch(`https://my-blog-app-heroku.herokuapp.com/blogs/${id}`,{
+  fetch(`http://localhost:8080/blogs/${id}`,{
           method:"PATCH",
           body:JSON.stringify({
             approved:"yes"

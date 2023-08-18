@@ -33,7 +33,7 @@ export const Contentwriterlist = ({ el,FectAllUsers,setload }) => {
     const Handledelete = ()=>{
         setOpen(false)
         setload(true)
-           fetch(`https://my-blog-app-heroku.herokuapp.com/user/${el._id}`,{
+           fetch(`http://localhost:8080/user/${el._id}`,{
             method:"DELETE"
            })
            .then(()=>{
@@ -56,7 +56,7 @@ export const Contentwriterlist = ({ el,FectAllUsers,setload }) => {
             password,
         }
         setload(true)
-        fetch(`https://my-blog-app-heroku.herokuapp.com/edituser/${el._id}`,{
+        fetch(`http://localhost:8080/edituser/${el._id}`,{
             method:"PATCH",
             body:JSON.stringify(obj),
             headers:{"content-type":"application/json"}

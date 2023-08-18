@@ -19,7 +19,7 @@ export const ContentWriterForm = ()=>{
          }))
     }
     const VerifyDetails = ()=>{
-        fetch('https://my-blog-app-heroku.herokuapp.com/SignUp',{
+        fetch('http://localhost:8080/',{
             method:"POST",
             body:JSON.stringify(user),
             headers:{"content-type":"application/json"}

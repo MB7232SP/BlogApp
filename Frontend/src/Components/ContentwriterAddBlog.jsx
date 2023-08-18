@@ -22,7 +22,7 @@ export const ContentWriterAddBlog = ()=>{
     }
     const Saveblog = ()=>{
         setload(true)
-        fetch(`https://my-blog-app-heroku.herokuapp.com/blogs/${User._id}`,{
+        fetch(`http://localhost:8080/blogs/${User._id}`,{
             method:"POST",
             body:JSON.stringify(Blog),
             headers:{"content-type":"application/json"}

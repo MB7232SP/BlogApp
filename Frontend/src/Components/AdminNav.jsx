@@ -17,7 +17,7 @@ import { setuser } from "../Redux/Action";
       Fetchuser();
    },[])
    const Fetchuser = ()=>{
-          fetch('https://my-blog-app-heroku.herokuapp.com/TokenLogin',{
+          fetch('http://localhost:8080/TokenLogin',{
             method:"POST",
             body:JSON.stringify({jwtToken:tocken}),
             headers:{"content-type":"application/json"}

@@ -21,7 +21,7 @@ export const Login = ()=>{
     }
     const VerifyDetails = ()=>{
         setload(true)
-        fetch('https://my-blog-app-heroku.herokuapp.com/Login',{
+        fetch('http://localhost:8080/Login',{
             method:"POST",
             body:JSON.stringify(user),
             headers:{"content-type":"application/json"}
